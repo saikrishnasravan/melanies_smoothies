@@ -32,3 +32,7 @@ if ingredients_list:
 
     my_insert_stmt = f"""insert into smoothies.public.orders(name_on_order, ingredients)
                          values ('{name_on_order}', '{ingredients_string}')"""
+
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
